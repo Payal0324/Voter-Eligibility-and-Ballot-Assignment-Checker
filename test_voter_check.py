@@ -28,13 +28,14 @@ class TestVoterCheck(unittest.TestCase):
             ["Voter ID: 1001", "Age: 17", "Not eligible", "Cannot vote"],
         )
         
-    def test_for_loop_checks_three_voters_in_order(self):
+    def test_for_loop_checks_voters_in_order(self):
         self.assertEqual(
-            self.lines[5:14],
+            self.lines[5:17],
             [
                 "Age: 17", "Not eligible", "Cannot vote",
                 "Age: 18", "Eligible", "General",
                 "Age: 70", "Eligible", "Senior",
+                "Age: 30", "Not eligible", "Cannot vote",
             ],
         )
         
@@ -45,7 +46,7 @@ class TestVoterCheck(unittest.TestCase):
         
     def test_while_loop_counts_down_from_5_to_1(self):
         self.assertEqual(
-            self.lines[15:20],
+            self.lines[18:23],
             [
                 "Polling station closes in 5 minutes",
                 "Polling station closes in 4 minutes",
@@ -57,7 +58,7 @@ class TestVoterCheck(unittest.TestCase):
         
     def test_ends_with_closed(self):
         self.assertEqual(self.lines[-1], "Closed")
-        self.assertEqual(len(self.lines), 21)
+        self.assertEqual(len(self.lines), 24)
 
 if __name__ == "__main__":
     unittest.main()

@@ -17,14 +17,14 @@ else:
 
 print("---")
 
-# Three more voters in line, all citizens
-ages = [17, 18, 70]
-for voter_age in ages:
+# More voters in line, including a non-citizen
+voters = [(17, True), (18, True), (70, True), (30, False)]
+for voter_age, voter_is_citizen in voters:
     print("Age:", voter_age)
-    if voter_age >= 65 and is_citizen:
+    if voter_age >= 65 and voter_is_citizen:
         print("Eligible")
         print("Senior")
-    elif voter_age >= 18 and is_citizen:
+    elif voter_age >= 18 and voter_is_citizen:
         print("Eligible")
         print("General")
     else:
