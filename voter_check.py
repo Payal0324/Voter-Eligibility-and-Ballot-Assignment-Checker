@@ -36,6 +36,7 @@ print("---")
 # Countdown to closing time
 minutes = 5
 while minutes >= 1:
-    print("Polling station closes in", minutes, "minutes")
+    unit = "minute" if minutes == 1 else "minutes"
+    print("Polling station closes in", minutes, unit)
     minutes = minutes - 1
 print("Closed")

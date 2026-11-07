@@ -51,7 +51,7 @@ class TestVoterCheck(unittest.TestCase):
                 "Polling station closes in 4 minutes",
                 "Polling station closes in 3 minutes",
                 "Polling station closes in 2 minutes",
-                "Polling station closes in 1 minutes",
+                "Polling station closes in 1 minute",
             ],
         )
         
